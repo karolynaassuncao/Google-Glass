@@ -33,39 +33,57 @@
 		</nav>
 	</header>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
 
-Endereço do Usuário
+<section id="corpo-Full">
+	<article id="noticia-principal">
+		<header id="cabecalho-artigo">
+			<hgroup>
+				<h3> Fale Conosco > Contato</h3>
+				<h2> Formulario de contato</h2>
+				<h3>Atualizado em 01/Maio/2013</h3>	
+			</hgroup>
+		</header>
+
+<FORM>
+        
+    <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+
+    <p>Nome:<input type ="text" name="tNome" id="cNome" size ="20" maxlength="30"placeholder ="Nome completo"/></p>
+    <p>Senha:<input type ="password" name="tSenha" id="csenha" size ="20" maxlength="8" placeholder="Senha"/></p>
+    <p>E-mail:<input type ="email" name="tEmail" id="cEmail" size ="20" maxlength="30" placeholder="Email"/></p>
+
+        <fieldset id = "sexo"><legend>Sexo:</legend>
+          <input type="radio" name="tSexo" id= "cInput"/>Masculino
+          <input type="radio" name="tSexo" id= "cInput"/>Feminino
+        </fieldset>
+        
+    <p>Data de Nascimento:</p>
+        </fieldset>
+
+        <fieldset id="Endereco"><legend> Endereço do Usuário</legend> 
     Logradouro:
     Número:
     Estado:
     Cidade:
+       </legend> </fieldset>
 
-Mensagem do Usuário
+        <fieldset id="Mensagem"> Mensagem do Usuário <legend> 
     Grau de Urgência:
     Mensagem:
+        </legend></fieldset>   
 
-Quero um Google Glass
+        <fieldset id="Pedido"><legend>   Quero um Google Glass</legend>
     Gostaria de adquirir um Google Glass quando disponível
     Cor:
     Quantidade:
     Preço Total: R$
-
+        </fieldset> 
+</FORM>
 
 [BOTÃO ENVIAR]
-
+    </article>
+</section>
 <footer id="rodape">
     <p>Copyright &copy: 2013 - by Gustavo Guanabara </br>
 <a href="https://www.facebook.com/profile.php?id=100002214811316&ref=bookmarks" target="blank">Facebook</a> |
