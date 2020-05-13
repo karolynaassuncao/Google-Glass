@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+section#conteudo{
+    width: 1000px;
+    margin: auto;
+}
+
+iframe#frame-spec{
+    width: 400x;
+    height: 280px;
+    border:none;
+    float: right;
+    margin-left: 50px;
+    overflow:hidden ;
+}
+
+map{
+    
+  
+} 
