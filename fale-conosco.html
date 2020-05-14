@@ -45,39 +45,120 @@
 			</hgroup>
 		</header>
 
-<FORM>
+<FORM method="post" id ="fContato" action="mailto:lsn_cearamor@hotmail.com">
         
     <fieldset id="usuario"><legend>Identificação do Usuário</legend>
 
-    <p>Nome:<input type ="text" name="tNome" id="cNome" size ="20" maxlength="30"placeholder ="Nome completo"/></p>
-    <p>Senha:<input type ="password" name="tSenha" id="csenha" size ="20" maxlength="8" placeholder="Senha"/></p>
-    <p>E-mail:<input type ="email" name="tEmail" id="cEmail" size ="20" maxlength="30" placeholder="Email"/></p>
+    <p><label for ="cNome">Nome</label><input type ="text" name="tNome" id="cNome" size ="20" 
+    maxlength="30"placeholder ="Nome completo"/></p>
+    <p><label for ="cSenha">Senha</label>
+        <input type ="password" name="tSenha" id="cSenha" size ="20" maxlength="8" placeholder="Senha"/></p>
+            <p><label for ="cEmail">E-mail</label>
+        <input type ="email" name="tEmail" id="cEmail" size ="20" maxlength="30" placeholder="Email"/></p>
 
         <fieldset id = "sexo"><legend>Sexo:</legend>
-          <input type="radio" name="tSexo" id= "cInput"/>Masculino
-          <input type="radio" name="tSexo" id= "cInput"/>Feminino
+          <input type="radio" name="tSexo" id= "cMasc" checked/><label for ="cMasc">Masculino </label><br>
+          <input type="radio" name="tSexo" id= "cFem"/><label for ="cFem">Feminino </label>
         </fieldset>
         
-    <p>Data de Nascimento:</p>
+    <p>Data de Nascimento:<input type ="date" name="tNasc" id ="cNasc"/></p>
         </fieldset>
 
         <fieldset id="Endereco"><legend> Endereço do Usuário</legend> 
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-       </legend> </fieldset>
+            <p><label for ="cLog">Logradouro:</label>
+                <input type ="text" name="tLog" id="cLog" size="20" maxlength="30" placeholder="bairro,casas,Endereço"/></p>
+            <p><label for ="tNum">Número:</label>
+                <input type ="number" name ="tNum" id ="cNum" size ="20" min="0" max ="9999"/></p>
+            <p><label for ="cEst">Estado:</label></p>
+                <select name ="tEst" id="cEst">
+                    <option value="0">Selecione o Estado</option>
+                    <option value="DF">Distrito Federal</option>
+       <optgroup label="Norte">
+                    <option value="AM">Amazonas</option>
+                    <option value="RR">Roraima</option>
+                    <option value="AP">Amapá</option>
+                    <option value="PA">Pará</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="AC">Acre</option>
+       </optgroup>
+       <optgroup label="Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PI">Piauí</option>
+                    <option value="CE">Ceará</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+       </optgroup>
+       <optgroup label="Centro-Oeste">
+                    <option value="GO">Goiás</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+       </optgroup>
+       <optgroup label="Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espirito Santo</option>
+       </optgroup>
+       <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+       </optgroup>
+                </select>
+                    
+            <p><label for ="cCit">Cidade:
+                <input name="tCitt" id="cCitt" size="20" maxlength="30" placeholder="Sua cidade" list ="cidades"/></label></p>
+                <datalist id ="cidades"> 
+                        <option value="Rio Branco"></option>
+                        <option value="Maceió"></option>
+                        <option value="Macapá"></option>
+                        <option value="Manaus"></option>
+                        <option value="Salvador"></option>
+                        <option value="Fortaleza"></option>
+                        <option value="Brasília"></option>
+                        <option value="Vitória"></option>
+                        <option value="Goiânia"></option>
+                        <option value="São Luís"></option>
+                        <option value="Cuiabá"></option>
+                        <option value="Campo Grande"></option>
+                        <option value="Belo Horizonte"></option>
+                        <option value="Belém"></option>
+                        <option value="João Pessoa"></option>
+                        <option value="Curitiba"></option>
+                        <option value="Recife"></option>
+                        <option value="Teresina"></option>
+                        <option value="Rio de Janeiro"></option>
+                        <option value="Natal"></option>
+                        <option value="Porto Alegre"></option>
+                        <option value="Porto Velho"></option>
+                        <option value="Boa Vista"></option>
+                        <option value="Florianópolis"></option>
+                        <option value="São Paulo"></option>
+                        <option value="Aracaju"></option>
+                        <option value="Palmas"></option>
+                </datalist>
 
-        <fieldset id="Mensagem"> Mensagem do Usuário <legend> 
-    Grau de Urgência:
-    Mensagem:
-        </legend></fieldset>   
+       </legend></fieldset>
+
+        <fieldset id="Mensagem"><legend> Mensagem do Usuário <legend> 
+            <p><label for ="cGra">Grau de Urgência:</label>
+            Min<input  type="range" name ="tUgr" id ="cUgr" min="0" max ="10"/>Max</p>
+            <p><label for ="cMen">Mensagem:</label>
+            <textarea name ="cMen" id ="tMen" cols="45" rows="5" placeholder="Deixe aqui sua mensagem">
+
+            </textarea></p>
+        </fieldset>   
 
         <fieldset id="Pedido"><legend>   Quero um Google Glass</legend>
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+            <p><label for =""> de adquirir um Google Glass quando disponível</label></p>
+            <p><label for ="">Cor:</label></p>
+            <p><label for ="">Quantidade:</label></p>
+            <p><label for ="">Preço Total: R$</label></p>
         </fieldset> 
 </FORM>
 
