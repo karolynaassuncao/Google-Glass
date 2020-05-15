@@ -6,7 +6,15 @@
 			
         <link rel="stylesheet" type="text/css"href="_css/estilo.css">
         <link rel="stylesheet" type="text/css"href="_css/form.css">
-		<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet"> 
+        
+        <script>
+           function calc(){
+               var qtd = parseInt(document.getElementById('cQtd').value);
+               tot = qtd * 1500;
+               document.getElementById('cTot').value =tot;
+           }
+        </script>
 		
 	</head>
 <script src ="_javascript/funcoes.js"></script>
@@ -41,12 +49,12 @@
 		<header id="cabecalho-artigo">
 			<hgroup>
 				<h3> Fale Conosco > Contato</h3>
-				<h2> Formulario de contato</h2>
+				<h2> Formulario de contato</h2> 
 				<h3>Atualizado em 01/Maio/2013</h3>	
 			</hgroup>
 		</header>
 
-<FORM method="post" id ="fContato" action="mailto:lsn_cearamor@hotmail.com">
+<form method="post" id ="fContato" action="mailto:lsn_cearamor@hotmail.com" oninput="calc();">
         
     <fieldset id="usuario"><legend>Identificação do Usuário</legend>
 
@@ -70,7 +78,7 @@
                 <input type ="text" name="tLog" id="cLog" size="20" maxlength="30" placeholder="bairro,casas,Endereço"/></p>
             <p><label for ="tNum">Número:</label>
                 <input type ="number" name ="tNum" id ="cNum" size ="20" min="0" max ="9999"/></p>
-            <p><label for ="cEst">Estado:</label></p>
+            <p><label for ="cEst">Estado:</label>
                 <select name ="tEst" id="cEst">
                     <option value="0">Selecione o Estado</option>
                     <option value="DF">Distrito Federal</option>
@@ -110,7 +118,7 @@
                     <option value="RS">Rio Grande do Sul</option>
                     <option value="SC">Santa Catarina</option>
        </optgroup>
-                </select>
+    </p></select>
                     
             <p><label for ="cCit">Cidade:
                 <input name="tCitt" id="cCitt" size="20" maxlength="30" placeholder="Sua cidade" list ="cidades"/></label></p>
@@ -146,24 +154,29 @@
 
        </legend></fieldset>
 
-        <fieldset id="Mensagem"><legend> Mensagem do Usuário <legend> 
-            <p><label for ="cGra">Grau de Urgência:</label>
-            Min<input  type="range" name ="tUgr" id ="cUgr" min="0" max ="10"/>Max</p>
-            <p><label for ="cMen">Mensagem:</label>
+        <fieldset id="Mensagem"><legend> Mensagem do Usuário </legend> 
+            <p><label for ="cUgr">Grau de Urgência:</label>
+            Min <input  type="range" name ="tUgr" id ="cUgr" min="0" max ="10"/> Max</p>
+            <p><label for ="tMen">Mensagem:</label></p>
             <textarea name ="cMen" id ="tMen" cols="45" rows="5" placeholder="Deixe aqui sua mensagem">
 
-            </textarea></p>
+            </textarea>
         </fieldset>   
 
         <fieldset id="Pedido"><legend>   Quero um Google Glass</legend>
-            <p><label for =""> de adquirir um Google Glass quando disponível</label></p>
-            <p><label for ="">Cor:</label></p>
-            <p><label for ="">Quantidade:</label></p>
-            <p><label for ="">Preço Total: R$</label></p>
+            <p><label for ="cPed">
+                <input type="checkbox" name="tPed" id="cPed"checked> de adquirir um Google Glass quando disponível</label></p>
+            <p><label for ="cCor">Cor:</label> 
+                <input type="color"  name="tCor" id="cCor"></p>
+            <p><label for ="cQtd">Quantidade:</label>
+                <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+            <p><label for ="cTot">Preço Total: R$</label>
+            <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
         </fieldset> 
+        <input type="image" id="but" name="enviar" src="_imagens/botao-enviar.png">
 </FORM>
 
-[BOTÃO ENVIAR]
+
     </article>
 </section>
 <footer id="rodape">

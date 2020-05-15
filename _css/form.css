@@ -58,3 +58,9 @@ input#bot{
     margin-left: auto;
     margin-right: auto;
 }
+
+input#but{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+}

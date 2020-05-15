@@ -77,8 +77,11 @@
 				position: relative;
 				border: 8px solid white;
 				box-shadow : 1px 1px 10px;
-				width:800px;
-				height: px;
+				width:930px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				
 				
 			}
 			figure.foto-legenda img{
@@ -268,9 +271,18 @@
 
 			video#vid1
 			{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+				width: 950px;
 				
 			}
 			
+			video#vid2{
+				margin-top:-17px;
+				width:500px
+			}
 			
 			
 			
