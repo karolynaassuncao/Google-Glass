@@ -4,12 +4,12 @@
 		<meta chaset="UTF-8">
 		<title>projetoHtml</title>
 
-		<link rel="stylesheet" type="text/css"href="/estilo.css">
+		<link rel="stylesheet" type="text/css"href="_css/estilo.css">
 		<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet"> 
-		<link rel="stylesheet" href="media.css">
+		<link rel="stylesheet" href="_css/media.css">
 		
 	</head>
-<script src ="funcoes.js"></script>
+<script src ="_javascript/funcoes.js"></script>
 
 	<body>
 	<div id="interface">
@@ -20,16 +20,16 @@
 	<h2>A revolução do Google está chegando</h2>
 </hgroup>
 
-<img id="icone" src="glass-oculos-preto-peq.png">
+<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
 
 		<nav id="menu">	
 <h1>Menu Principal</h1>
 	<ul>
-<li onmouseover="mudaFoto('home.png')" onmouseout="mudaFoto('multimidia.png')"><a href="index.html"> Home</a></li>
-<li onmouseover="mudaFoto('especificacoes.png')"onmouseout="mudaFoto('multimidia.png')"><a href="specs.	html">Especificações</a></li>
-<li	onmouseover="mudaFoto('fotos.png')" onmouseout="mudaFoto('multimidia.png')"><a href="fotos.html">Fotos</a></li>
-<li onmouseover="mudaFoto('multimidia.png')"onmouseout="mudaFoto('multimidia.png')"><a href="multimidia.html">Multimídia </a></li>
-<li onmouseover="mudaFoto('contato.png')" onmouseout="mudaFoto('multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html"> Home</a></li>
+<li onmouseover="mudaFoto('_imagens/especificacoes.png')"onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.	html">Especificações</a></li>
+<li	onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+<li onmouseover="mudaFoto('_imagens/multimidia.png')"onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia </a></li>
+<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
 	</ul>
 		</nav>
 	</header>
@@ -47,12 +47,15 @@
 		</header>
 		<div id="tv-radio">
 			<audio id="musica" controls="controls" autoplay="autoplay">
-				<source src="2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+				<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
 
 			</audio>
+			<video id="filme" controls="controls" poster="_imagens/video-mini01.jpg">
+				
+			}}>
+				<source src="_media/getting-started.mp4" type= "video/mp4"/>
 			
-			<video id="filme" controls="controls" poster="video-mini01.jpg">
-				<source src="getting-started.mp4" type= "video/mp4"/>
+
 			</video>
 		</div>
 	</article>
